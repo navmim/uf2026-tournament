@@ -1,0 +1,14 @@
+{
+  "name": "uf2026-tournament",
+  "version": "1.0.0",
+  "private": true,
+  "description": "UF2026 tournament tracker: public read-only site + password-protected admin panel",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

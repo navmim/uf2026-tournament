@@ -1,10 +1,6 @@
-/* UF2026 tournament data: default teams, fixtures and bracket structure,
-   transcribed from DRAFT_SCHDLE_UF2026_2.pdf */
-
-const DEFAULT_TEAMS = {
-  T01: "Team 01", T02: "Team 02", T03: "Team 03", T04: "Team 04", T05: "Team 05",
-  T06: "Team 06", T07: "Team 07", T08: "Team 08", T09: "Team 09", T10: "Team 10",
-};
+/* UF2026 tournament data: fixtures and bracket structure (static),
+   transcribed from DRAFT_SCHDLE_UF2026_2.pdf. Team names and results
+   are dynamic and come from the backend at /api/state. */
 
 const GROUPS = {
   "GROUP A": ["T01", "T03", "T05", "T07", "T09"],
