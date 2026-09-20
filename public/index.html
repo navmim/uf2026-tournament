@@ -4,13 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>UF2026 Tournament</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="site-header">
-  <h1>UF2026 Tournament</h1>
-  <p>Group Stage &middot; Thu 24 Sep &ndash; Wed 30 Sep &nbsp;|&nbsp; Knockout &middot; Thu 1 Oct &ndash; Sat 3 Oct</p>
+  <div class="pitch-lines" aria-hidden="true"></div>
+  <div class="site-header-inner">
+    <p class="eyebrow">&mdash; UF2026 &middot; 2026 Season</p>
+    <h1>Tournament <em>Central</em></h1>
+    <p class="header-sub">Group Stage &middot; Thu 24 Sep &ndash; Wed 30 Sep &nbsp;|&nbsp; Knockout &middot; Thu 1 Oct &ndash; Sat 3 Oct</p>
+  </div>
 </header>
 
 <nav class="tabs">
@@ -23,17 +30,20 @@
   <p id="load-error" class="load-error" style="display:none">Couldn't reach the server &mdash; showing the last data loaded. Retrying automatically&hellip;</p>
 
   <section id="tab-schedule" class="tab-panel active">
-    <h2>Group Stage Fixtures</h2>
+    <p class="eyebrow">&mdash; Schedule &amp; Results</p>
+    <h2>Fixtures</h2>
     <div id="schedule-body"></div>
   </section>
 
   <section id="tab-standings" class="tab-panel">
-    <h2>Group Standings</h2>
+    <p class="eyebrow">&mdash; Group Tables</p>
+    <h2>Standings</h2>
     <p class="hint">Top 2 in each group (highlighted) qualify for the knockout stage.</p>
     <div id="standings-body"></div>
   </section>
 
   <section id="tab-bracket" class="tab-panel">
+    <p class="eyebrow">&mdash; Road to the Final</p>
     <h2>Knockout Bracket</h2>
     <div id="bracket-body"></div>
   </section>
