@@ -24,13 +24,15 @@ See `.env.example` for the environment variables used.
 
 ## Deploying
 
-Deploy anywhere that runs Node (Render, Railway, Fly.io, etc.). On Render, for example:
+Deploy anywhere that runs Node (Render, Railway, Fly.io, etc.). This repo includes a Render Blueprint (`render.yaml`) for a near one-click deploy:
 
-1. New **Web Service** → connect this GitHub repo
-2. Build command: `npm install`
-3. Start command: `npm start`
-4. Add environment variables: `ADMIN_PASSWORD` (your chosen password) and `JWT_SECRET` (a long random string)
-5. Deploy — the public site and `/admin.html` are both served from the same URL
+1. Go to the [Render dashboard](https://dashboard.render.com/blueprints) → **New Blueprint Instance**
+2. Connect this GitHub repo (`uf2026-tournament`)
+3. Render reads `render.yaml` and proposes the web service automatically
+4. Enter a value for `ADMIN_PASSWORD` when prompted (`JWT_SECRET` is auto-generated)
+5. Click **Apply** — once the build finishes, the public site and `/admin.html` are both served from the same `onrender.com` URL
+
+Without the blueprint, the manual equivalent is: New **Web Service** → connect repo → build command `npm install` → start command `npm start` → add `ADMIN_PASSWORD` and `JWT_SECRET` env vars.
 
 **Note on persistence:** match data is stored in a JSON file on disk (`server/data/state.json`). Most free hosting tiers wipe the filesystem on redeploy/restart, so admin edits could be lost when the service restarts. Fine for a short tournament; ask if you want it backed by a real database instead.
 
