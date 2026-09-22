@@ -178,7 +178,7 @@ function renderStandings() {
     const tbody = table.querySelector("tbody");
     rows.forEach((r, i) => {
       const tr = document.createElement("tr");
-      if (i < 2) tr.className = "qualified";
+      if (i < QUALIFIERS_PER_GROUP) tr.className = "qualified";
       tr.innerHTML = `<td>${i + 1}</td><td class="standings-team">${teamName(state, r.id)}</td><td>${r.played}</td><td>${r.won}</td><td>${r.drawn}</td><td>${r.lost}</td><td>${r.gf}</td><td>${r.ga}</td><td>${r.gd}</td><td><strong>${r.points}</strong></td>`;
       tbody.appendChild(tr);
     });
