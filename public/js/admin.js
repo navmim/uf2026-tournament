@@ -32,7 +32,7 @@ async function apiFetch(path, options = {}) {
   });
   if (res.status === 401) {
     clearToken();
-    showLogin("Session expired — please log in again.");
+    showLogin("Session expired - please log in again.");
     throw new Error("unauthorized");
   }
   return res;
@@ -346,7 +346,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (getToken()) {
     showAdmin();
-    fetchState().catch(() => showLogin("Session expired — please log in again."));
+    fetchState().catch(() => showLogin("Session expired - please log in again."));
   } else {
     showLogin("");
   }

@@ -45,4 +45,4 @@ const BRACKET = [
   { id: "FINAL", stage: "Final", date: "Sat 3 Oct", time: "9:00 PM", fixture: "GRAND FINAL", team1: { type: "winner", match: "SF1" }, team2: { type: "winner", match: "SF2" } },
 ];
 
-const NO_BREAK_DAY = { date: "Sat 3 Oct", label: "No break day — Final day" };
+const NO_BREAK_DAY = { date: "Sat 3 Oct", label: "No break day - Final day" };
