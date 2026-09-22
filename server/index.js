@@ -13,7 +13,7 @@ if (!ADMIN_PASSWORD) {
   console.warn("WARNING: ADMIN_PASSWORD is not set. /api/login will always reject.");
 }
 if (!JWT_SECRET) {
-  console.warn("WARNING: JWT_SECRET is not set. Using an insecure default — set this in production.");
+  console.warn("WARNING: JWT_SECRET is not set. Using an insecure default - set this in production.");
 }
 const SECRET = JWT_SECRET || "dev-only-insecure-secret-change-me";
 
