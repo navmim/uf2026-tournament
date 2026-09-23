@@ -1,9 +1,8 @@
 :root {
   --bg: #0a0b0a;
   --bg-alt: #111311;
-  --pitch-dark: #071b10;
-  --pitch: #0e3320;
-  --pitch-light: #14432a;
+  --brand-black: #000000;
+  --brand-charcoal: #232323;
   --card: #131513;
   --card-alt: #191c19;
   --border: rgba(255, 255, 255, 0.09);
@@ -47,32 +46,19 @@ em {
 header.site-header {
   position: relative;
   overflow: hidden;
-  background:
-    radial-gradient(ellipse at 50% -10%, var(--pitch-light) 0%, transparent 60%),
-    linear-gradient(180deg, var(--pitch) 0%, var(--pitch-dark) 55%, #06100a 100%);
+  background: linear-gradient(90deg, var(--brand-black) 0%, var(--brand-charcoal) 100%);
   padding: 2.5rem 1rem 2rem;
   text-align: center;
 }
 
-.pitch-lines {
+.header-accent {
   position: absolute;
-  inset: 0;
+  top: -10%;
+  right: -8%;
+  width: 220px;
+  opacity: 0.12;
   pointer-events: none;
-  opacity: 0.35;
-  background-image:
-    repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0 8%, transparent 8% 16%);
-}
-
-.pitch-lines::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 55%;
-  width: 140px;
-  height: 140px;
-  border: 1px solid rgba(255,255,255,0.14);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 0 30px rgba(255,255,255,0.05));
 }
 
 .site-header-inner {
@@ -82,13 +68,17 @@ header.site-header {
   margin: 0 auto;
 }
 
-header.site-header h1 {
-  margin: 0 0 0.6rem;
-  font-size: clamp(2rem, 7vw, 2.8rem);
-  font-weight: 900;
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
-  line-height: 1.05;
+.site-logo {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  margin: 0 auto 0.75rem;
+  display: block;
+}
+
+.site-logo-small {
+  max-width: 200px;
+  margin: 0 auto 1rem;
 }
 
 .header-sub {
@@ -405,9 +395,7 @@ footer.site-footer a:hover { color: var(--text); text-decoration: underline; }
   justify-content: center;
   position: relative;
   overflow: hidden;
-  background:
-    radial-gradient(ellipse at 50% -10%, var(--pitch-light) 0%, transparent 60%),
-    linear-gradient(180deg, var(--pitch) 0%, var(--pitch-dark) 55%, #06100a 100%);
+  background: linear-gradient(90deg, var(--brand-black) 0%, var(--brand-charcoal) 100%);
   padding: 1rem;
 }
 
